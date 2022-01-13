@@ -1,17 +1,16 @@
 defmodule Mongodriver do
-  @moduledoc """
-  Documentation for `Mongodriver`.
-  """
+  @spec start(any, any) :: {:error, any} | {:ok, pid}
+  def start(_type, _args) do
+    import Supervisor.Spec
 
-  @doc """
-  Hello world.
+    children = [
+      worker(Mongo, [[name: :mongo, database: "test", pool_size: 2]])
+    ]
 
-  ## Examples
+    opts = [strategy: :one_for_one, name: MyApp.Supervisor]
+    Supervisor.start_link(children, opts)
+  end
 
-      iex> Mongodriver.hello()
-      :world
-
-  """
   def hello do
     :world
   end
