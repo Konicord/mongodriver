@@ -9,7 +9,7 @@ defmodule Mongodriver.Application do
       # Starts a worker by calling: Mongodriver.Worker.start_link(arg)
       # {Mongodriver.Worker, arg}
 
-      {Mongo, name: :mongo, database: "database name", pool_size: 2}
+      {Mongo, url: "mongodb://localhost:27017/backend", pool_size: 2, name: :mongo}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
