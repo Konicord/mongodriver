@@ -1,6 +1,9 @@
 # Mongodriver
 
-**TODO: Add description**
+A simple way to integrate MongoDB within Elixir (mix).
+([x]) Pooling
+([x]) Connection
+([-]) Queries
 
 ## Installation
 
