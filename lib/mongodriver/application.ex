@@ -6,6 +6,7 @@ defmodule Mongodriver.Application do
   @impl true
   def start(_type, _args) do
     children = [
+
       # Starts a worker by calling: Mongodriver.Worker.start_link(arg)
       # {Mongodriver.Worker, arg}
 
@@ -14,6 +15,7 @@ defmodule Mongodriver.Application do
 
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
+    
     opts = [strategy: :one_for_one, name: Mongodriver.Supervisor]
     Supervisor.start_link(children, opts)
   end
