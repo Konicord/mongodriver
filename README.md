@@ -3,7 +3,7 @@
 A simple way to integrate MongoDB within Elixir (mix).
 - [x] Connection
 - [x] Pooling
-- [ ] Queries
+- [x] Queries
 - [ ] Create, Update, Delete data
 - [ ] Add new data, users => data
 
